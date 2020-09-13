@@ -26,6 +26,7 @@ class Body extends StatelessWidget {
                 right: 0,
                 child:
                Container(
+                 alignment: Alignment.center,
                 margin: EdgeInsets.symmetric(horizontal: kDefaultPadding),
                 padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
                 height: 54,
@@ -38,7 +39,16 @@ class Body extends StatelessWidget {
                     color: kPrimaryColor.withOpacity(0.23)
                   ), ]
                 ),
-                child: TextField(),
+                child: TextField(
+                  decoration: InputDecoration(
+                    hintText: "Search",
+                    hintStyle: TextStyle(
+                      color: kPrimaryColor.withOpacity(0.5),
+                    ),
+                    enabledBorder: InputBorder.none,
+                    focusedBorder: InputBorder.none,
+                  ),
+                ),
               ),
               ),
             ],
