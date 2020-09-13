@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:plantapp/constants.dart';
 
 class Body extends StatelessWidget {
@@ -47,6 +48,7 @@ class Body extends StatelessWidget {
                     ),
                     enabledBorder: InputBorder.none,
                     focusedBorder: InputBorder.none,
+                    suffixIcon: SvgPicture.asset("assets/icons/search.svg")
                   ),
                 ),
               ),
