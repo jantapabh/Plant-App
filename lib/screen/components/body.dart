@@ -14,6 +14,7 @@ class Body extends StatelessWidget {
           child: Stack(
             children: <Widget>[
               Container(
+                padding: EdgeInsets.only(left: kDefaultPadding, right: kDefaultPadding),
                 height: size.height * 0.2 - 27,
                 decoration: BoxDecoration(
                     color: kPrimaryColor,
@@ -29,7 +30,7 @@ class Body extends StatelessWidget {
                              fontWeight: FontWeight.bold),
                              ),
                              Spacer(),
-                             Image.asset("assets/images/logo.pnge")
+                             Image.asset("assets/images/logo.png"),
                         ],)
               ),
               Positioned(
