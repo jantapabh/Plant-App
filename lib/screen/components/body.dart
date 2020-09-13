@@ -19,7 +19,18 @@ class Body extends StatelessWidget {
                     color: kPrimaryColor,
                     borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular(36),
-                        bottomRight: Radius.circular(36))),
+                        bottomRight: Radius.circular(36)
+                        )
+                        ),
+                        child: Row(children: <Widget>[
+                          Text('Hi Uishopy!',
+                           style: Theme.of(context).textTheme.headline.copyWith(
+                             color: Colors.white,
+                             fontWeight: FontWeight.bold),
+                             ),
+                             Spacer(),
+                             Image.asset("assets/images/logo.pnge")
+                        ],)
               ),
               Positioned(
                 bottom: 0,
@@ -41,6 +52,7 @@ class Body extends StatelessWidget {
                       ]),
                   child: Row(children: <Widget>[
                     Expanded(child:  TextField(
+                      onChanged: (value) {},
                       decoration: InputDecoration(
                         hintText: "Search",
                         hintStyle: TextStyle(
@@ -48,9 +60,10 @@ class Body extends StatelessWidget {
                         ),
                         enabledBorder: InputBorder.none,
                         focusedBorder: InputBorder.none,
-                        suffixIcon: SvgPicture.asset("assets/icons/search.svg"),
                       ),
-                    ),)
+                    ),
+                    ),
+                    SvgPicture.asset("assets/icons/search.svg")
                   ]),
                 ),
               ),
